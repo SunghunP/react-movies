@@ -20,10 +20,10 @@ function App() {
     setMovie(data);
   }
 
-  // funciton will run once when the component loads ONLY
+  // function will run once when the component loads ONLY
   // WILL ONLY repeat if any value in the array changes.
   useEffect(() => {
-    const moviesArray = ['Batman', 'Grease', 'Superman', 'Undefined', 'Everything Everywhere All at Once']
+    const moviesArray = ['The Dark Knight Rises', 'Spider-Man: No Way Home', 'Batman V Superman: Dawn Of Justice', 'Frozen', 'Everything Everywhere All at Once', 'Avengers: Infinity War', 'Avengers: Endgame']
     const item = moviesArray[Math.floor(Math.random()*moviesArray.length)]
     getMovie(item)
   }, [])
