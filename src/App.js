@@ -1,6 +1,7 @@
 import Form from './components/Form';
 import MovieDisplay from './components/MovieDisplay';
 import { useState } from 'react';
+import { useEffect } from 'react';
 
 function App() {
 
@@ -18,6 +19,14 @@ function App() {
     // updating the state to that object
     setMovie(data);
   }
+
+  // funciton will run once when the component loads ONLY
+  // WILL ONLY repeat if any value in the array changes.
+  useEffect(() => {
+    const moviesArray = ['Batman', 'Grease', 'Superman', 'Undefined', 'Everything Everywhere All at Once']
+    const item = moviesArray[Math.floor(Math.random()*moviesArray.length)]
+    getMovie(item)
+  }, [])
 
   return (
     <div className="App">
