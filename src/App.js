@@ -16,7 +16,7 @@ function App() {
     // convert the response to js object
     const data = await response.json();
     // updating the state to that object
-    setMovie(data)
+    setMovie(data);
   }
 
   return (
