@@ -18,14 +18,14 @@
 // export default MovieDisplay;
 
 const MovieDisplay = ({movie}) => {
+	const { Title, Poster, Writer, Genre, Released, Plot } = movie ? movie : {};
 	return !!movie && <div>
-		
-		<h1>{movie.Title}</h1>
-		<img src={movie.Poster} alt={movie.Title}></img>
-		<h3>{movie.Writer}</h3>
-		<h3>{movie.Genre}</h3>
-		<h3>{movie.Released}</h3>
-		<p>{movie.Plot}</p>
+		<h1>{Title}</h1>
+		<img src={Poster} alt={Title}></img>
+		<h3>{Writer}</h3>
+		<h3>{Genre}</h3>
+		<h3>{Released}</h3>
+		<p>{Plot}</p>
 	</div>
 }
 
