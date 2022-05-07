@@ -17,9 +17,20 @@ const Form = (props) => {
 		// setFormState({...formState, [event.target.name]: [event.target.value]});
 	}
 
+	const handleSubmit = (event) => {
+		// prevent refresh
+		event.preventDefault();
+		// pass searchTerm to get Movie 
+		props.getMovie(formState.searchTerm);
+		// reset form
+		setFormState({
+			searchTerm: ""
+		});
+	}
+
 	return (
 		<div>
-			<form>
+			<form onSubmit={handleSubmit}>
 				<input 
 					type="text" 
 					name="searchTerm" 
