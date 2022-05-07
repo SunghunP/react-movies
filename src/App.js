@@ -4,6 +4,8 @@ import MovieDisplay from './components/MovieDisplay'
 function App() {
   return (
     <div className="App">
+      <Form />
+      <MovieDisplay />
     </div>
   );
 }

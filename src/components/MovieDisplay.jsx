@@ -1,5 +1,5 @@
 const MovieDisplay = (props) => {
-	return <h1>Form</h1>
+	return <h1>MovieDisplay</h1>
 }
 
 export default MovieDisplay
