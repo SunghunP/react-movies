@@ -9,7 +9,7 @@ function App() {
   const [movie, setMovie] = useState(null);
 
   const getMovie = async (searchTerm) => {
-    // mkae API call
+    // make API call
     const response = await fetch(
       `http://www.omdbapi.com/?apikey=${API_KEY}&t=${searchTerm}`
     );
@@ -21,7 +21,7 @@ function App() {
 
   return (
     <div className="App">
-      <Form />
+      <Form getMovie={getMovie}/>
       <MovieDisplay movie={movie} />
     </div>
   );
