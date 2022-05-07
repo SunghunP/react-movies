@@ -30,6 +30,7 @@ const Form = (props) => {
 
 	return (
 		<div>
+			<h1>Search for a movie!</h1>
 			<form onSubmit={handleSubmit}>
 				<input 
 					type="text" 
