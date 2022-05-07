@@ -1,10 +1,23 @@
-import Form from './components/Form'
-import MovieDisplay from './components/MovieDisplay'
+import Form from './components/Form';
+import MovieDisplay from './components/MovieDisplay';
 import { useState } from 'react';
 
 function App() {
 
-  const [movie, setMovie] = useState(null)
+  const API_KEY="8e2fa05a";
+
+  const [movie, setMovie] = useState(null);
+
+  const getMovie = async (searchTerm) => {
+    // mkae API call
+    const response = await fetch(
+      `http://www.omdbapi.com/?apikey=${API_KEY}&t=${searchTerm}`
+    );
+    // convert the response to js object
+    const data = await response.json();
+    // updating the state to that object
+    setMovie(data)
+  }
 
   return (
     <div className="App">
